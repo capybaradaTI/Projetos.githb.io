@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13/06/2023</title>
+</head>
+<body>
+    <form  method="post" id="form1">
+    <h2>Pergunta 1</h2>
+    <input type="text" name="p1"  size="50" maxlength="50"><br><br>
+    <h2>Pergunta 2</h2>
+    <input type="text" name="p2"  size="50" maxlength="50"><br><br>
+    <h2>Pergunta 3</h2>
+    <input type="text" name="p3"  size="50" maxlength="50"><br><br>
+
+    <fieldset>
+        <input type="submit" value="Enviar" id="btenviar">
+        <input type="reset" value="Limpar">
+    </fieldset>
+        </form>
+        <script>
+        form1.onsubmit = function () {
+            p1 = document.getElementsByName('p1')[0];
+            p2 = document.getElementsByName('p2')[0];
+            p3 = document.getElementsByName('p3');
+
+            p1.style.backgroundColor = 'red';
+            p2.style.backgroundColor = 'red';
+            p3.style.backgroundColor = 'red';
+
+            let ok = false;
+
+            if (p1.value.length > 1) {
+                p1.style.backgroundColor = 'white';
+                ok = true;
+            } else if (p2.value.length > 1) {
+                p2.style.backgroundColor = 'white';
+                ok = true;
+            }else if (p3.value.length > 1) {
+                p3.style.backgroundColor = 'white';
+                ok = true;
+            
+            }
+            return ok ? true : false;
+        }
+        </script>
+        </fieldset>    
+</body>
+</html>

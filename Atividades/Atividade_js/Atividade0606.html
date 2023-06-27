@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    Diga o numero <input type="text" name="txt" value="" onchange="myFunction(this.value)">
+    <br>
+    <br>
+    
+    <span id="span">
+
+    </span>
+    <script>
+    var myFunction = parseInt(document.getElementById("txt").value);
+    function myFunction(val) {
+      document.getElementById("span").textContent = "O resultado de " + val +  ' elevado ao cubo é '+ val**3 ;
+    }
+    </script>
+</body>
+</html>

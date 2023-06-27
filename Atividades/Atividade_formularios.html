@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscrição em Evento </title>
+</head>
+<body>
+    <fieldset>
+    <h1 style="text-align: center ;"> Formulario de Inscrição em Evento</h1>
+    
+    
+    <form>
+        <table style="width: 70%; margin: 0 auto">
+            <tr>
+    
+                    <td style="text-align: right;">Nome Completo:</td>
+                    <td><input type="text" name="Nome" placeholder="Nome" required>
+                    </td>
+            </tr>
+        
+            <tr>
+    
+                <td style="text-align: right;">E-mail:</td>
+                <td><input type="email" name="email" placeholder="ex: myname@example.com">
+                </td>
+            </tr>
+            <tr>
+
+                <td style="text-align: right;">Sexo:</td>
+                <td><input type="radio" name="Masculino" value="Masculino">Masculino
+                    &nbsp;&nbsp;
+                    <input type="radio" name="Feminino" value="feminino">Feminino
+                   
+                </td>
+            </tr>
+            <tr>
+    
+                <td style="text-align: right;">Cargo:</td>
+                <td><input type="text" name="Nome"  required>
+                </td>
+        </tr>
+        <tr>
+    
+            <td style="text-align: right;">Nascimento:</td>
+            <td><input type="date" name="Nome"  required>
+            </td>
+    </tr>
+
+    <tr>
+
+        <td style="text-align: right;">Telefone</td>
+        <td><input type="tel" name="Telefone" placeholder="Telefone">
+        </td>
+    </tr>
+
+    
+
+</form>   
+</table>
+
+</fieldset>
+ 
+
+
+
+
+
+<h2>Informações da instituição</h2>
+<p>Preencha os campos abaixo com as informações da empresa em que você trabalha</p>
+
+<form>
+    <table style="width: 70%; margin: 0 auto">
+    
+        <tr>
+    
+            <td style="text-align:right;">Empresa:</td>
+            <td><input type="text" name="Empresa"  >
+            </td>
+    </tr>
+    <tr>
+    
+        <td style="text-align:right;">Endereço Completo:</td>
+        <td><input type="text" name="ed"  >
+        </td>
+</tr>
+<tr>
+    
+    <td style="text-align:right;">Cidade:</td>
+    <td><input type="text" name="Cidade"  >
+    </td>
+</tr>
+ 
+<tr>
+
+    <td style="text-align: right;">Estado:
+    </td>
+    <td>
+        <select name="Estado">
+            
+            <option selected disabled > Selecione</option>
+            <option>São Paulo</option>
+            <option>Minas Gerais</option>
+            <option>Rondônia</option>
+            <option>Acre</option>
+
+        </select>
+
+    </td>
+
+</tr>
+
+<tr>
+
+    <td style="text-align: right;">Quant. funcionarios:</td>
+    <td><input type="number" name="Quant. funcionarios " step="0.05" min="0" max="100000"></td>
+
+</tr>
+    
+</table>
+    </form>
+    
+    
+
+
+
+
+
+
+
+</body>
+</html>

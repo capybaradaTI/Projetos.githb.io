@@ -1,0 +1,56 @@
+html,body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: intro; }
+.item3 { grid-area: main; }
+.item4 { grid-area: logo; }
+.item5 { grid-area: footer; }
+.item6 { grid-area: box1; }
+.item7 { grid-area: box2; }
+.item8 { grid-area: box3; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo logo logo header header header'
+    'main main main main main main'
+    'intro intro intro intro intro intro'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 0.8em;
+  min-width: 100%;
+    min-height: 100%;
+}
+
+.grid-container > div {
+  background-color: rgba(139, 137, 137, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+@media screen and (max-width: 640px) {
+    .container-grid{
+    display:grid;
+    grid-template-areas: 
+    'logo logo logo logo logo logo'
+    'header header header header header header '
+    'main main main main main main'
+    'intro intro intro intro intro intro'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'box1 box1 box2 box2 box3 box3'
+    'footer footer footer footer footer footer';}
+    
+}

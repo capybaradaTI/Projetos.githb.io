@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          margin: 0;
+          padding: 20px;
+        }
+
+        label {  
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+    
+        input[type="text"] {
+          width: 200px;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+
+        
+    
+        button {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    
+        button:hover {
+          background-color: #45a049;
+        }
+    
+        #resultado {
+          margin-top: 20px;
+          font-weight: bold;
+        }
+      </style>
+</head>
+<body>
+    <h1>Calculadora de Média</h1>
+    <label for="nota1">Prova 1:</label>
+    <input type="text" id="nota1"><br><br>
+  
+    <label for="nota2">Prova 2:</label>
+    <input type="text" id="nota2"><br><br>
+    
+
+    <input type="radio" id="media-aritmetica" name="media-type" checked>
+    <label for="media-aritmetica">Média Aritmética</label>
+       
+
+    
+    <input type="radio" id="media-ponderada" name="media-type">
+    <label for="media-ponderada">Média Ponderada</label> <br><br>
+   
+
+    <button onclick="calcularMedia()">Calcular</button>
+    <button onclick="limparCampos()">Limpar</button><br><br>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularMedia() {
+          var nota1 = parseFloat(document.getElementById('nota1').value);
+          var nota2 = parseFloat(document.getElementById('nota2').value);
+          var media;
+    
+          if (document.getElementById('media-aritmetica').checked) {
+            media = (nota1 + nota2) / 2;
+          } else if (document.getElementById('media-ponderada').checked) {
+            media = (nota1 * 2 + nota2 * 4) / 6;
+          }
+    
+          var resultado = document.getElementById('resultado');
+          resultado.innerHTML = "Média: " + media.toFixed(2);
+    
+          if (media >= 60) {
+            resultado.innerHTML += "<br>Aprovado";
+          } else if (media < 30) {
+            resultado.innerHTML += "<br>Reprovado";
+          } else {
+            resultado.innerHTML += "<br>Recuperação";
+          }
+        }
+        
+    function limparCampos() {
+      document.getElementById('nota1').value = "";
+      document.getElementById('nota2').value = "";
+      document.getElementById('resultado').innerHTML = "";
+    }
+      </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Calculadora de Potência</legend>
+        <label for="base">Número base:</label>
+        <input id="base" type="number" step="1" min="0"><br>
+        <label for="potencia">Potência:</label>
+        <input id="potencia" type="number" step="1" min="0"><br>
+        <button id="calcular">Calcular</button>
+        <div id="resultado"></div>
+    </fieldset>
+
+    <script>
+        document.getElementById("calcular").addEventListener("click", function() {
+            var base = parseFloat(document.getElementById("base").value);
+            var potencia = parseInt(document.getElementById("potencia").value);
+            var resultado = 1;
+
+            for (var i = 0; i < potencia; i++) {
+                resultado *= base;
+            }
+
+            document.getElementById("resultado").textContent = "Resultado: " + resultado;
+        });
+    </script>
+</body>
+
+</html>

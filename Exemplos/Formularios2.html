@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <p><a href="../index.html"><img src="../imagens/voltar1.jpg" alt="Voltar" width=" 120" height="50"></a> </p>
+    <h2 style="text-align: center ;"> Segundo Exemplo Formularios</h2>
+   <form>
+    <table style="width: 70%; margin: 0 auto">
+        <tr>
+
+                <td style="text-align: right;">Nome</td>
+                <td><input type="text" name="Nome" placeholder="Nome">
+                </td>
+        </tr>
+    
+        <tr>
+
+            <td style="text-align: right;">E-mail:</td>
+            <td><input type="email" name="email" placeholder="Seu E-mail">
+            </td>
+        </tr>
+   
+    <tr>
+
+        <td style="text-align: right;">Salario:</td>
+        <td><input type="number" name="Salario" step="0.05" min="0" max="100000"></td>
+
+    </tr>
+
+  
+    <tr>
+
+        <td style="text-align: right;">Uf nascimento:
+        </td>
+        <td>
+            <select name="uf">
+                
+                <option selected disabled > Selecione</option>
+                <option>São Paulo</option>
+                <option>Minas Gerais</option>
+                <option>Rondônia</option>
+                <option>Acre</option>
+
+            </select>
+
+        </td>
+
+    </tr>
+    <tr>
+
+        <td style="text-align: right;">Telefone</td>
+        <td><input type="tel" name="Telefone" placeholder="Telefone">
+        </td>
+    </tr>
+    
+   
+    <tr>
+
+        <td style="text-align: right;">Hobby</td>
+        <td><input type="radio" name="Hobby" value="jogos">jogos
+            &nbsp;&nbsp;
+            <input type="radio" name="Esportes" value="esportes">Esportes
+            &nbsp;&nbsp;
+            <input type="radio" name="Musicas" value="Musicas">Musicas
+        </td>
+    </tr>
+        <tr>
+
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Enviar"> &nbsp;
+                <input type="reset" value="Limpar">
+            </td>
+
+
+    </tr>
+
+</tr>
+
+    </table>
+</form>
+</body>
+</html>

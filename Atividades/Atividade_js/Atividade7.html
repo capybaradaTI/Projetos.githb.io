@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Simulação de Divisão</legend>
+        <label for="dividendo">Dividendo:</label>
+        <input id="dividendo" type="number" step="1" min="0"><br>
+        <label for="divisor">Divisor:</label>
+        <input id="divisor" type="number" step="1" min="1"><br>
+        <button id="calcular">Calcular</button>
+        <div id="resultado"></div>
+    </fieldset>
+
+    <script>
+        document.getElementById("calcular").addEventListener("click", function() {
+            var dividendo = parseInt(document.getElementById("dividendo").value);
+            var divisor = parseInt(document.getElementById("divisor").value);
+            var resultado = 0;
+            var resto = 0;
+
+            while (dividendo >= divisor) {
+                dividendo -= divisor;
+                resultado++;
+            }
+
+            resto = dividendo;
+
+            document.getElementById("resultado").textContent = "Divisão inteira: " + resultado + ", Resto: " + resto;
+        });
+    </script>
+</body>
+
+</html>
